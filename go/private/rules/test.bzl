@@ -344,14 +344,12 @@ _go_test_kwargs = {
             doc = """Determines how the binary should be built and linked. This accepts some of
             the same values as `go build -buildmode` and works the same way.
 
-            <ul>
-            <li>`auto` (default): Controlled by `//go/config:linkmode`, which defaults to `pie` on supported platforms and `normal` elsewhere.</li>
-            <li>`normal`: Builds a normal executable with position-dependent code.</li>
-            <li>`pie`: Builds a position-independent executable.</li>
-            <li>`plugin`: Builds a shared library that can be loaded as a Go plugin. Only supported on platforms that support plugins.</li>
-            <li>`c-shared`: Builds a shared library that can be linked into a C program.</li>
-            <li>`c-archive`: Builds an archive that can be linked into a C program.</li>
-            </ul>
+            - `auto` (default): Controlled by `//go/config:linkmode`, which defaults to `pie` on supported platforms and `normal` elsewhere.
+            - `normal`: Builds a normal executable with position-dependent code.
+            - `pie`: Builds a position-independent executable.
+            - `plugin`: Builds a shared library that can be loaded as a Go plugin. Only supported on platforms that support plugins.
+            - `c-shared`: Builds a shared library that can be linked into a C program.
+            - `c-archive`: Builds an archive that can be linked into a C program.
             """,
         ),
         "cgo": attr.bool(
